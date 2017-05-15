@@ -39,14 +39,10 @@ logging.basicConfig(
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    # suite.addTest(Dttest('login'))
-    # suite.addTest(Dttest('hd'))
-    # suite.addTest(Dttest('tuichu'))
     logging.error("出错啦")
     suite.addTest(Case2('test01'))
     logging.warning("警告")
     logging.info("运行")
-    logging.debug("调试")
     suite.addTest(Case2('test02'))
     suite.addTest(Case2('test03'))
     suite.addTest(Case2('test04'))
@@ -70,7 +66,6 @@ if __name__ == '__main__':
     Excel(ass)                       # 调用生成测试信息Excel
     time.sleep(5)                    # 延时5秒
     mk()                             # 调用发送邮件
-
 
 # adb shell settings put secure default_input_method com.baidu.input/.ImeService
 # adb shell settings put secure default_input_method io.appium.android.ime/.UnicodeIME
